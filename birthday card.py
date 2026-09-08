@@ -1,0 +1,47 @@
+import pygame as py
+import time
+py.init()
+py.mixer.init()
+screen=py.display.set_mode((800,800))
+py.display.set_caption("birthday card")
+running=True
+bg1=py.image.load("Happy-birthday-background-design-Graphics-24890058-1.jpg")
+bg2=py.image.load("happy-birthday-cake-with-candles-balloons-and-confetti-background-generative-ai-free-photo.jpeg")
+bg3=py.image.load("happy-birthday-png-30.png")
+bg4=py.image.load("OIP.webp")
+bg5=py.image.load("birthday-background-design-happy-birthday-to-you-text-with-elegant-air-balloons-free-png.webp")
+bg1=py.transform.scale(bg1,(800,800))
+bg2=py.transform.scale(bg2,(800,800))
+bg3=py.transform.scale(bg3,(800,800))
+bg4=py.transform.scale(bg4,(800,800))
+bg5=py.transform.scale(bg5,(800,800))
+bgmusic=py.mixer.music.load("crystaleyeofficial-wedding-birthday-party-anniversary-celebration-background-music-587657.mp3")
+py.mixer.music.play(1)
+
+while running:
+    for event in py.event.get():
+        if event.type==py.QUIT:
+            py.mixer.music.stop()
+            running=False
+    screen.fill("blue")
+    screen.blit(bg1,(0,0))
+    py.display.update()
+    time.sleep(2)
+    screen.fill("blue")
+    screen.blit(bg2,(0,0))
+    py.display.update()
+    time.sleep(2)
+    screen.fill("blue")
+    screen.blit(bg3,(0,0))
+    py.display.update()
+    time.sleep(2)
+    screen.fill("blue")
+    screen.blit(bg4,(0,0))
+    py.display.update()
+    time.sleep(2)
+    screen.fill("blue")
+    screen.blit(bg5,(0,0))
+    py.display.update()
+    time.sleep(2)
+    screen.fill("blue")
+py.quit()
