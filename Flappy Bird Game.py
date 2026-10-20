@@ -100,6 +100,7 @@ while running:
     screen.blit(pipe2image,pipe2sprite)
     screen.blit(pipe3image,pipe3sprite)
     screen.blit(pipe4image,pipe4sprite)
+    text1= font1.render("Score: " + str(score), True, "black")
     screen.blit(text1,(300,100))
     pipe1sprite.center=(p1x,0)
     pipe2sprite.center=(p2x,600)
